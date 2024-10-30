@@ -38,6 +38,9 @@ public partial class GameWindow : Window
         {
             image.Source = new BitmapImage(new Uri($"kosci/{random.Next(1, 6)}.png", UriKind.Relative));
         }
+
+        Attempts--;
+        AttemptsRemaining.Content = Attempts;
     }
 
     private void EndGameButtonClick(object sender, RoutedEventArgs e)
