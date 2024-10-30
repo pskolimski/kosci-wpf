@@ -1,0 +1,44 @@
+﻿<Window x:Class="ZadanieEgzaminacyjne.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:ZadanieEgzaminacyjne"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Gra w kości: " />
+                <Label Name="NickName" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Pozostało prób: " />
+                <Label Name="AttemptsRemaining" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <Label Content="Posiadasz 5 rzutów kostkami. Możesz przerwać grę wcześniej poprzez naciśnięcie przycisku." />
+            <StackPanel  Orientation="Horizontal">
+                <Image Name="Image1" Source="kosci/question.png" Width="100" />
+                <Image Name="Image2" Source="kosci/question.png" Width="100" />
+                <Image Name="Image3" Source="kosci/question.png" Width="100" />
+                <Image Name="Image4" Source="kosci/question.png" Width="100" />
+                <Image Name="Image5" Source="kosci/question.png" Width="100" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Resetuj grę" Click="ResetButtonClick" />
+                <Button Content="Rzuć kośćmi" Click="RollButtonClick" />
+                <Button Content="Zakończ grę" Click="EndGameButtonClick" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

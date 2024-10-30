@@ -1,0 +1,14 @@
+﻿<Window x:Class="ZadanieEgzaminacyjne.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZadanieEgzaminacyjne"
+        mc:Ignorable="d"
+        Title="Gra w kości - Patryk Skolimowski" Height="450" Width="300">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Content="TWÓJ NICK" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" />
+        <TextBox Width="250" Margin="0, 15" Padding="3, 5" Name="NickName" Background="WhiteSmoke" />
+        <Button Width="100" Height="30" Margin="0, 15, 0, 0" Click="StartGameButton">OK</Button>
+    </StackPanel>
+</Window>
