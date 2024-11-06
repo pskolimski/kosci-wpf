@@ -5,8 +5,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:ZadanieEgzaminacyjne"
         mc:Ignorable="d"
-        Title="ResultWindow" Height="450" Width="800">
+        Title="Gra w kości - wynik gry" Height="350" Width="400">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0" Background="Goldenrod">
+            <Label Content="WYNIKI GRY" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Margin="15" />
+        </StackPanel>
+
+        <ListView Grid.Row="1" x:Name="ResultsView" />
+        <Button Grid.Row="2" Content="ZAGRAJ PONOWNIE" Style="{StaticResource ButtonStyle}" Click="PlayAgainButtonClick"/>
     </Grid>
 </Window>

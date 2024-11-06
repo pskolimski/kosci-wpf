@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:ZadanieEgzaminacyjne"
         mc:Ignorable="d"
-        Title="GameWindow" Height="450" Width="800">
+        Title="Gra w kości - gra trwa" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -13,20 +13,19 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Gra w kości: " />
-                <Label Name="NickName" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Pozostało prób: " />
-                <Label Name="AttemptsRemaining" />
+        <StackPanel Grid.Row="0" Background="Goldenrod">
+            <StackPanel Orientation="Vertical"  VerticalAlignment="Center" Background="Goldenrod" Margin="15">
+                <Label Content="Gra w kości" FontSize="26px" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Name="NickName" HorizontalAlignment="Center" VerticalAlignment="Center" />
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="1">
-            <Label Content="Posiadasz 5 rzutów kostkami. Możesz przerwać grę wcześniej poprzez naciśnięcie przycisku." />
-            <StackPanel  Orientation="Horizontal">
+        <StackPanel Grid.Row="1" Margin="15">
+            <Label Content="Posiadasz 5 rzutów kostkami. Możesz przerwać grę wcześniej poprzez naciśnięcie przycisku." FontSize="15" HorizontalAlignment="Center" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Pozostało 0 prób" FontWeight="SemiBold" FontSize="15" HorizontalAlignment="Center" Name="AttemptsRemaining" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 , 15">
                 <Image Name="Image1" Source="kosci/question.png" Width="100" />
                 <Image Name="Image2" Source="kosci/question.png" Width="100" />
                 <Image Name="Image3" Source="kosci/question.png" Width="100" />
@@ -34,10 +33,10 @@
                 <Image Name="Image5" Source="kosci/question.png" Width="100" />
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Resetuj grę" Click="ResetButtonClick" />
-                <Button Content="Rzuć kośćmi" Click="RollButtonClick" />
-                <Button Content="Zakończ grę" Click="EndGameButtonClick" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Resetuj grę" Click="ResetButtonClick" Style="{StaticResource ButtonStyle}" />
+                <Button Content="Rzuć kośćmi" Click="RollButtonClick" Style="{StaticResource ButtonStyle}" />
+                <Button Content="Zakończ grę" Click="EndGameButtonClick" Style="{StaticResource ButtonStyle}" />
             </StackPanel>
         </StackPanel>
     </Grid>
